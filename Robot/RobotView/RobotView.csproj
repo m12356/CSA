@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleView.cs">
+      <SubType>usercontrol</SubType>
+    </Compile>
+    <Compile Include="ConsoleView.designer.cs">
+      <DependentUpon>ConsoleView.cs</DependentUpon>
+    </Compile>
     <Compile Include="LedView.cs">
       <SubType>usercontrol</SubType>
     </Compile>
@@ -50,6 +56,12 @@
       <DependentUpon>LedView.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SwitchView.cs">
+      <SubType>usercontrol</SubType>
+    </Compile>
+    <Compile Include="SwitchView.designer.cs">
+      <DependentUpon>SwitchView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RobotCtrl\RobotCtrl.csproj">
@@ -58,6 +70,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ConsoleView.resx">
+      <DependentUpon>ConsoleView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LedView.resx">
       <DependentUpon>LedView.cs</DependentUpon>
     </EmbeddedResource>
