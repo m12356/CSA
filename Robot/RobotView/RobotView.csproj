@@ -56,6 +56,11 @@
       <DependentUpon>LedView.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
     <Compile Include="SwitchView.cs">
       <SubType>usercontrol</SubType>
     </Compile>
@@ -76,15 +81,25 @@
     <EmbeddedResource Include="LedView.resx">
       <DependentUpon>LedView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="SwitchView.resx">
       <DependentUpon>SwitchView.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Ressources\LedOff.bmp" />
-    <Content Include="Ressources\LedOn.bmp" />
-    <Content Include="Ressources\SwitchOff.bmp" />
-    <Content Include="Ressources\SwitchOn.bmp" />
+    <None Include="Resources\LedOff.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LedOn.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SwitchOff.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SwitchOn.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkTargetsVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
