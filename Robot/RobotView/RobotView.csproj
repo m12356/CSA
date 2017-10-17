@@ -76,6 +76,9 @@
     <EmbeddedResource Include="LedView.resx">
       <DependentUpon>LedView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SwitchView.resx">
+      <DependentUpon>SwitchView.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ressources\LedOff.bmp" />

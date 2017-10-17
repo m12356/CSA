@@ -15,9 +15,5 @@ namespace RobotView
             InitializeComponent();
         }
 
-        private void ConcoleView_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
