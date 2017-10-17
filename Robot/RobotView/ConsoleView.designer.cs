@@ -35,55 +35,59 @@ namespace RobotView
             this.ledView2 = new RobotView.LedView();
             this.ledView1 = new RobotView.LedView();
             this.switchView1 = new RobotView.SwitchView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ledView4
             // 
-            this.ledView4.Location = new System.Drawing.Point(81, 3);
+            this.ledView4.Location = new System.Drawing.Point(84, 3);
             this.ledView4.Name = "ledView4";
-            this.ledView4.Size = new System.Drawing.Size(21, 22);
+            this.ledView4.Size = new System.Drawing.Size(20, 20);
             this.ledView4.TabIndex = 8;
             // 
             // switchView4
             // 
-            this.switchView4.Location = new System.Drawing.Point(186, 3);
+            this.switchView4.Location = new System.Drawing.Point(192, 4);
             this.switchView4.Name = "switchView4";
             this.switchView4.Size = new System.Drawing.Size(20, 40);
             this.switchView4.TabIndex = 7;
             // 
             // switchView3
             // 
-            this.switchView3.Location = new System.Drawing.Point(160, 3);
+            this.switchView3.Location = new System.Drawing.Point(164, 4);
             this.switchView3.Name = "switchView3";
             this.switchView3.Size = new System.Drawing.Size(20, 40);
             this.switchView3.TabIndex = 6;
             // 
             // switchView2
             // 
-            this.switchView2.Location = new System.Drawing.Point(134, 3);
+            this.switchView2.Location = new System.Drawing.Point(136, 3);
             this.switchView2.Name = "switchView2";
             this.switchView2.Size = new System.Drawing.Size(20, 40);
             this.switchView2.TabIndex = 5;
             // 
             // ledView3
             // 
-            this.ledView3.Location = new System.Drawing.Point(54, 3);
+            this.ledView3.Location = new System.Drawing.Point(57, 3);
             this.ledView3.Name = "ledView3";
-            this.ledView3.Size = new System.Drawing.Size(21, 22);
+            this.ledView3.Size = new System.Drawing.Size(20, 20);
             this.ledView3.TabIndex = 3;
             // 
             // ledView2
             // 
-            this.ledView2.Location = new System.Drawing.Point(27, 3);
+            this.ledView2.Location = new System.Drawing.Point(30, 3);
             this.ledView2.Name = "ledView2";
-            this.ledView2.Size = new System.Drawing.Size(21, 22);
+            this.ledView2.Size = new System.Drawing.Size(20, 20);
             this.ledView2.TabIndex = 2;
             // 
             // ledView1
             // 
-            this.ledView1.Location = new System.Drawing.Point(0, 3);
+            this.ledView1.Location = new System.Drawing.Point(3, 3);
             this.ledView1.Name = "ledView1";
-            this.ledView1.Size = new System.Drawing.Size(21, 22);
+            this.ledView1.Size = new System.Drawing.Size(20, 20);
             this.ledView1.TabIndex = 1;
             // 
             // switchView1
@@ -93,10 +97,46 @@ namespace RobotView
             this.switchView1.Size = new System.Drawing.Size(20, 40);
             this.switchView1.TabIndex = 4;
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(3, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 27);
+            this.label1.Text = "0";
+            this.label1.ParentChanged += new System.EventHandler(this.label1_ParentChanged);
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(30, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(16, 20);
+            this.label2.Text = "1";
+            this.label2.ParentChanged += new System.EventHandler(this.label2_ParentChanged);
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(57, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(16, 20);
+            this.label3.Text = "2";
+            this.label3.ParentChanged += new System.EventHandler(this.label3_ParentChanged);
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(85, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(16, 20);
+            this.label4.Text = "3";
+            // 
             // ConsoleView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ledView4);
             this.Controls.Add(this.switchView4);
             this.Controls.Add(this.switchView3);
@@ -106,7 +146,7 @@ namespace RobotView
             this.Controls.Add(this.ledView1);
             this.Controls.Add(this.switchView1);
             this.Name = "ConsoleView";
-            this.Size = new System.Drawing.Size(299, 117);
+            this.Size = new System.Drawing.Size(226, 63);
             this.ResumeLayout(false);
 
         }
@@ -121,5 +161,9 @@ namespace RobotView
         private SwitchView switchView3;
         private SwitchView switchView4;
         private LedView ledView4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -83,6 +83,8 @@
   <ItemGroup>
     <Content Include="Ressources\LedOff.bmp" />
     <Content Include="Ressources\LedOn.bmp" />
+    <Content Include="Ressources\SwitchOff.bmp" />
+    <Content Include="Ressources\SwitchOn.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkTargetsVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

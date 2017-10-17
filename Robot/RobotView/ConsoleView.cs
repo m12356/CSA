@@ -15,5 +15,19 @@ namespace RobotView
             InitializeComponent();
         }
 
+        private void label1_ParentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_ParentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_ParentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
