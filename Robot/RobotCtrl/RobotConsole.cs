@@ -81,5 +81,6 @@ namespace RobotCtrl
             get { return this.switches[(int)swi]; }
         }
         #endregion
+       
     }
 }

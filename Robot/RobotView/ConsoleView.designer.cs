@@ -49,7 +49,6 @@ namespace RobotView
             this.label1.Size = new System.Drawing.Size(21, 27);
             this.label1.Text = "0";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.ParentChanged += new System.EventHandler(this.label1_ParentChanged);
             // 
             // label2
             // 
@@ -59,7 +58,6 @@ namespace RobotView
             this.label2.Size = new System.Drawing.Size(16, 20);
             this.label2.Text = "1";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2.ParentChanged += new System.EventHandler(this.label2_ParentChanged);
             // 
             // label3
             // 
@@ -69,7 +67,6 @@ namespace RobotView
             this.label3.Size = new System.Drawing.Size(16, 20);
             this.label3.Text = "2";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label3.ParentChanged += new System.EventHandler(this.label3_ParentChanged);
             // 
             // label4
             // 
@@ -79,14 +76,6 @@ namespace RobotView
             this.label4.Size = new System.Drawing.Size(16, 20);
             this.label4.Text = "3";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // ledView4
-            // 
-            this.ledView4.Location = new System.Drawing.Point(84, 3);
-            this.ledView4.Name = "ledView4";
-            this.ledView4.Size = new System.Drawing.Size(20, 20);
-            this.ledView4.State = false;
-            this.ledView4.TabIndex = 8;
             // 
             // switchView4
             // 
@@ -112,6 +101,22 @@ namespace RobotView
             this.switchView2.State = false;
             this.switchView2.TabIndex = 5;
             // 
+            // switchView1
+            // 
+            this.switchView1.Location = new System.Drawing.Point(108, 3);
+            this.switchView1.Name = "switchView1";
+            this.switchView1.Size = new System.Drawing.Size(20, 40);
+            this.switchView1.State = false;
+            this.switchView1.TabIndex = 4;
+            // 
+            // ledView4
+            // 
+            this.ledView4.Location = new System.Drawing.Point(84, 3);
+            this.ledView4.Name = "ledView4";
+            this.ledView4.Size = new System.Drawing.Size(20, 20);
+            this.ledView4.State = false;
+            this.ledView4.TabIndex = 8;
+            // 
             // ledView3
             // 
             this.ledView3.Location = new System.Drawing.Point(57, 3);
@@ -130,19 +135,11 @@ namespace RobotView
             // 
             // ledView1
             // 
-            this.ledView1.Location = new System.Drawing.Point(3, 3);
+            this.ledView1.Location = new System.Drawing.Point(4, 5);
             this.ledView1.Name = "ledView1";
             this.ledView1.Size = new System.Drawing.Size(20, 20);
             this.ledView1.State = false;
             this.ledView1.TabIndex = 1;
-            // 
-            // switchView1
-            // 
-            this.switchView1.Location = new System.Drawing.Point(108, 3);
-            this.switchView1.Name = "switchView1";
-            this.switchView1.Size = new System.Drawing.Size(20, 40);
-            this.switchView1.State = false;
-            this.switchView1.TabIndex = 4;
             // 
             // ConsoleView
             // 
@@ -163,7 +160,6 @@ namespace RobotView
             this.Controls.Add(this.switchView1);
             this.Name = "ConsoleView";
             this.Size = new System.Drawing.Size(226, 63);
-            this.Click += new System.EventHandler(this.ConsoleView_Click);
             this.ResumeLayout(false);
 
         }
@@ -173,11 +169,11 @@ namespace RobotView
         private LedView ledView1;
         private LedView ledView2;
         private LedView ledView3;
+        private LedView ledView4;
         private SwitchView switchView1;
         private SwitchView switchView2;
         private SwitchView switchView3;
         private SwitchView switchView4;
-        private LedView ledView4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RobotView;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,9 +12,19 @@ namespace TestConsole
 {
     public partial class Form1 : Form
     {
+        RobotCtrl.RobotConsole robotConsole;
+
+
         public Form1()
         {
             InitializeComponent();
+            this.robotConsole = new RobotCtrl.RobotConsole();
+            this.consoleView.setRobotConsole(robotConsole);
+        }
+
+        private void label3_ParentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

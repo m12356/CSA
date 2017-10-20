@@ -16,7 +16,6 @@ namespace RobotView
         public LedView()
         {
             InitializeComponent();
-
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -34,6 +33,11 @@ namespace RobotView
 
 
         }
+        public void setLed(RobotCtrl.Led led)
+        {
+            this.led = led;
+        }
+
 
         public void set()
         {
