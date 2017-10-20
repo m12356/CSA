@@ -11,6 +11,8 @@ namespace RobotView
     public partial class SwitchView : UserControl
     {
         public bool state;
+        private RobotCtrl.Switch mySwitch;
+
         public SwitchView()
         {
             InitializeComponent();
@@ -28,6 +30,16 @@ namespace RobotView
                 pictureBox1.Image = state ? Resource1.SwitchOn : Resource1.SwitchOff;
 
             }
+        }
+
+        public void set()
+        {
+            mySwitch.SwitchStateChanged += MyHandler;
+        }
+
+        private void MyHandler(Object sender, RobotCtrl.SwitchEventArgs e)
+        {
+            this.State = e.SwitchEnabled;
         }
     }
 }

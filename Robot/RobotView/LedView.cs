@@ -44,8 +44,8 @@ namespace RobotView
         {
             this.State = e.LedEnabled;
         }
-        {
 
-        }
+
+
     }
 }
