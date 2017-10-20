@@ -8,15 +8,16 @@ using System.Windows.Forms;
 
 namespace RobotView
 {
-    public partial class SwitchView : UserControl
+    public partial class LedView : UserControl
     {
-        public bool state;
-        public SwitchView()
+        private bool state;
+
+        public LedView()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         { }
 
         public Boolean State
@@ -25,9 +26,11 @@ namespace RobotView
             set
             {
                 state = value;
-                pictureBox1.Image = state ? Resource1.SwitchOn : Resource1.SwitchOff;
+                pictureBox2.Image = state ? Resource1.LedOn : Resource1.LedOff;
 
             }
+
+
         }
     }
 }
