@@ -11,10 +11,12 @@ namespace RobotView
     public partial class LedView : UserControl
     {
         private bool state;
+        private RobotCtrl.Led led;
 
         public LedView()
         {
             InitializeComponent();
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -30,6 +32,19 @@ namespace RobotView
 
             }
 
+
+        }
+
+        public void set()
+        {
+            led.LedStateChanged += MyHandler;
+        }
+
+        private void MyHandler(Object sender, RobotCtrl.LedEventArgs e)
+        {
+            this.State = e.LedEnabled;
+        }
+        {
 
         }
     }
