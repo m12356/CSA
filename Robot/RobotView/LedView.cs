@@ -39,7 +39,7 @@ namespace RobotView
             get { return led; }
             set
             {
-                led.LedStateChanged += MyHandler;
+                led.LedStateChanged += LedStateChanged;
                 led = value;
             }
 
@@ -47,7 +47,7 @@ namespace RobotView
 
 
 
-        private void MyHandler(Object sender, RobotCtrl.LedEventArgs e)
+        private void LedStateChanged(Object sender, RobotCtrl.LedEventArgs e)
         {
             this.State = e.LedEnabled;
         }

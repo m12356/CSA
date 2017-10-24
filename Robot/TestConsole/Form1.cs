@@ -1,4 +1,5 @@
-﻿using RobotView;
+﻿using RobotCtrl;
+using RobotView;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ namespace TestConsole
 {
     public partial class Form1 : Form
     {
-        RobotCtrl.RobotConsole robotConsole;
+        RobotConsole robotConsole;
 
 
         public Form1()
@@ -20,6 +21,16 @@ namespace TestConsole
             InitializeComponent();
             this.robotConsole = new RobotCtrl.RobotConsole();
             this.consoleView.RobotConsole = robotConsole;
+            robotConsole[Switches.Switch1].SwitchStateChanged += Form1_SwitchStateChanged;
+            robotConsole[Switches.Switch2].SwitchStateChanged += Form1_SwitchStateChanged;
+            robotConsole[Switches.Switch3].SwitchStateChanged += Form1_SwitchStateChanged;
+            robotConsole[Switches.Switch4].SwitchStateChanged += Form1_SwitchStateChanged;
+        }
+
+        private void Form1_SwitchStateChanged(object sender, SwitchEventArgs e)
+        {
+            robotConsole[(Leds)(int)e.Swi].LedEnabled = e.SwitchEnabled;
+                
         }
 
         private void label3_ParentChanged(object sender, EventArgs e)

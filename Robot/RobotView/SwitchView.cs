@@ -37,7 +37,7 @@ namespace RobotView
             get { return mySwitch; }
             set
             {
-                mySwitch.SwitchStateChanged += MyHandler;
+                mySwitch.SwitchStateChanged += SwitchStateChanged;
                 mySwitch = value;
             }
 
@@ -45,7 +45,7 @@ namespace RobotView
 
 
 
-        private void MyHandler(Object sender, RobotCtrl.SwitchEventArgs e)
+        private void SwitchStateChanged(Object sender, RobotCtrl.SwitchEventArgs e)
         {
             this.State = e.SwitchEnabled;
         }
