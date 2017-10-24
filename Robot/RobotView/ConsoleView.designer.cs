@@ -159,7 +159,7 @@ namespace RobotView
             this.Controls.Add(this.ledView1);
             this.Controls.Add(this.switchView1);
             this.Name = "ConsoleView";
-            this.Size = new System.Drawing.Size(226, 63);
+            this.Size = new System.Drawing.Size(221, 63);
             this.ResumeLayout(false);
 
         }
