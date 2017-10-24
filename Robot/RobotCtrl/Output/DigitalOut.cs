@@ -33,6 +33,7 @@ namespace RobotCtrl
         public DigitalOut(int port)
         {
             Port = port;
+            IOPort.Write(Port, 0);
             data = 0;
         }
         #endregion
@@ -55,7 +56,12 @@ namespace RobotCtrl
             get { return data; }
             set 
             { 
-                // Todo 
+                if(data != value)
+                {
+                    data = value;
+                    IOPort.Write(Port, data);
+                    OnDigitalOutputChanged(EventArgs.Empty);
+                }
             }
         }
         #endregion
