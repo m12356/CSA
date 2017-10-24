@@ -77,6 +77,14 @@ namespace RobotView
             this.label4.Text = "3";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // ledView4
+            // 
+            this.ledView4.Location = new System.Drawing.Point(84, 3);
+            this.ledView4.Name = "ledView4";
+            this.ledView4.Size = new System.Drawing.Size(20, 20);
+            this.ledView4.State = false;
+            this.ledView4.TabIndex = 8;
+            // 
             // switchView4
             // 
             this.switchView4.Location = new System.Drawing.Point(192, 4);
@@ -100,22 +108,6 @@ namespace RobotView
             this.switchView2.Size = new System.Drawing.Size(20, 40);
             this.switchView2.State = false;
             this.switchView2.TabIndex = 5;
-            // 
-            // switchView1
-            // 
-            this.switchView1.Location = new System.Drawing.Point(108, 3);
-            this.switchView1.Name = "switchView1";
-            this.switchView1.Size = new System.Drawing.Size(20, 40);
-            this.switchView1.State = false;
-            this.switchView1.TabIndex = 4;
-            // 
-            // ledView4
-            // 
-            this.ledView4.Location = new System.Drawing.Point(84, 3);
-            this.ledView4.Name = "ledView4";
-            this.ledView4.Size = new System.Drawing.Size(20, 20);
-            this.ledView4.State = false;
-            this.ledView4.TabIndex = 8;
             // 
             // ledView3
             // 
@@ -141,9 +133,17 @@ namespace RobotView
             this.ledView1.State = false;
             this.ledView1.TabIndex = 1;
             // 
+            // switchView1
+            // 
+            this.switchView1.Location = new System.Drawing.Point(108, 3);
+            this.switchView1.Name = "switchView1";
+            this.switchView1.Size = new System.Drawing.Size(20, 40);
+            this.switchView1.State = false;
+            this.switchView1.TabIndex = 4;
+            // 
             // ConsoleView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Controls.Add(this.label4);
