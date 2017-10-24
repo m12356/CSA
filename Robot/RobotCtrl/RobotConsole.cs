@@ -78,6 +78,7 @@ namespace RobotCtrl
         /// <returns></returns>
         public Switch this[Switches swi]
         {
+            
             get { return this.switches[(int)swi]; }
         }
         #endregion

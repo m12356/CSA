@@ -33,16 +33,19 @@ namespace RobotView
 
 
         }
-        public void setLed(RobotCtrl.Led led)
+
+        public RobotCtrl.Led Led
         {
-            this.led = led;
+            get { return led; }
+            set
+            {
+                led.LedStateChanged += MyHandler;
+                led = value;
+            }
+
         }
 
 
-        public void set()
-        {
-            led.LedStateChanged += MyHandler;
-        }
 
         private void MyHandler(Object sender, RobotCtrl.LedEventArgs e)
         {

@@ -32,15 +32,18 @@ namespace RobotView
             }
         }
 
-        public void setSwitch(RobotCtrl.Switch mySwitch)
+        public RobotCtrl.Switch Switch
         {
-            this.mySwitch = mySwitch;
+            get { return mySwitch; }
+            set
+            {
+                mySwitch.SwitchStateChanged += MyHandler;
+                mySwitch = value;
+            }
+
         }
 
-        public void set()
-        {
-            mySwitch.SwitchStateChanged += MyHandler;
-        }
+
 
         private void MyHandler(Object sender, RobotCtrl.SwitchEventArgs e)
         {
