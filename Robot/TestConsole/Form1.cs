@@ -19,7 +19,7 @@ namespace TestConsole
         {
             InitializeComponent();
             this.robotConsole = new RobotCtrl.RobotConsole();
-            this.consoleView.setRobotConsole(robotConsole);
+            this.consoleView.RobotConsole = robotConsole;
         }
 
         private void label3_ParentChanged(object sender, EventArgs e)

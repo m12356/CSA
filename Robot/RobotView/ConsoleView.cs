@@ -17,25 +17,22 @@ namespace RobotView
             InitializeComponent();
         }
 
-        public void set()
+        public RobotCtrl.RobotConsole RobotConsole
         {
-            ledView1.Led = robotConsole[RobotCtrl.Leds.Led1];
-            ledView2.Led = robotConsole[RobotCtrl.Leds.Led2];
-            ledView3.Led = robotConsole[RobotCtrl.Leds.Led3];
-            ledView4.Led = robotConsole[RobotCtrl.Leds.Led4];
+            get { return robotConsole; }
+            set
+            {
+                robotConsole = value;
+                ledView1.Led = robotConsole[RobotCtrl.Leds.Led1];
+                ledView2.Led = robotConsole[RobotCtrl.Leds.Led2];
+                ledView3.Led = robotConsole[RobotCtrl.Leds.Led3];
+                ledView4.Led = robotConsole[RobotCtrl.Leds.Led4];
 
-            switchView1.Switch = robotConsole[RobotCtrl.Switches.Switch1];
-            switchView2.Switch = robotConsole[RobotCtrl.Switches.Switch2];
-            switchView3.Switch = robotConsole[RobotCtrl.Switches.Switch3];
-            switchView4.Switch = robotConsole[RobotCtrl.Switches.Switch4];
-
+                switchView1.Switch = robotConsole[RobotCtrl.Switches.Switch1];
+                switchView2.Switch = robotConsole[RobotCtrl.Switches.Switch2];
+                switchView3.Switch = robotConsole[RobotCtrl.Switches.Switch3];
+                switchView4.Switch = robotConsole[RobotCtrl.Switches.Switch4];
+            }
         }
-
-        public void setRobotConsole(RobotCtrl.RobotConsole robotConsole)
-        {
-            this.robotConsole = robotConsole;
-        }
-
-
     }
 }
