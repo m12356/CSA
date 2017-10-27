@@ -54,9 +54,9 @@ namespace RobotCtrl
         public int Data
         {
             get { return data; }
-            set 
-            { 
-                if(data != value)
+            set
+            {
+                if (data != value)
                 {
                     data = value;
                     IOPort.Write(Port, data);
@@ -89,8 +89,22 @@ namespace RobotCtrl
         /// <returns>den aktuellen Zustand des Bits</returns>
         public virtual bool this[int bit]
         {
-            get { return false; /* ToDo */  }
-            set { /* ToDo */ }
+            get { return (Data & (1 << bit)) != 0; }     
+            set
+            {
+                if (value)
+                {
+                    // value = true => bit setzen
+                    Data = Data | (1 << bit);
+                }
+                else
+                {
+                    // value = false => bit löschen
+                    Data = Data & ~(1 << bit);
+                }
+
+
+            }
         }
         #endregion
     }
