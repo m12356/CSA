@@ -37,8 +37,12 @@ namespace RobotView
             get { return mySwitch; }
             set
             {
-                mySwitch.SwitchStateChanged += SwitchStateChanged;
+                
                 mySwitch = value;
+                if (mySwitch != null)
+                {
+                    mySwitch.SwitchStateChanged += SwitchStateChanged;
+                }
             }
 
         }

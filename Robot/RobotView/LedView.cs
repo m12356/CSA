@@ -39,8 +39,11 @@ namespace RobotView
             get { return led; }
             set
             {
-                led.LedStateChanged += LedStateChanged;
                 led = value;
+                if (led != null)
+                {
+                    led.LedStateChanged += LedStateChanged;
+                }
             }
 
         }

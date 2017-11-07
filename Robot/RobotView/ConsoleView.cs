@@ -24,15 +24,19 @@ namespace RobotView
             set
             {
                 robotConsole = value;
-                ledView1.Led = robotConsole[Leds.Led1];
-                ledView2.Led = robotConsole[Leds.Led2];
-                ledView3.Led = robotConsole[Leds.Led3];
-                ledView4.Led = robotConsole[Leds.Led4];
 
-                switchView1.Switch = robotConsole[Switches.Switch1];
-                switchView2.Switch = robotConsole[Switches.Switch2];
-                switchView3.Switch = robotConsole[Switches.Switch3];
-                switchView4.Switch = robotConsole[Switches.Switch4];
+                if (robotConsole != null)
+                {
+                    ledView1.Led = robotConsole[Leds.Led1];
+                    ledView2.Led = robotConsole[Leds.Led2];
+                    ledView3.Led = robotConsole[Leds.Led3];
+                    ledView4.Led = robotConsole[Leds.Led4];
+
+                    switchView1.Switch = robotConsole[Switches.Switch1];
+                    switchView2.Switch = robotConsole[Switches.Switch2];
+                    switchView3.Switch = robotConsole[Switches.Switch3];
+                    switchView4.Switch = robotConsole[Switches.Switch4];
+                }
             }
         }
     }
