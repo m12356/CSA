@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
+using RobotCtrl;
 
 namespace RobotView
 {
@@ -51,7 +52,17 @@ namespace RobotView
 
         private void SwitchStateChanged(Object sender, RobotCtrl.SwitchEventArgs e)
         {
-            this.State = e.SwitchEnabled;
+            if (InvokeRequired) // Prüft ob Thread != GUI-Thread
+            {
+                // Synchronisierung notwendig
+                Invoke(new EventHandler<SwitchEventArgs>(SwitchStateChanged), sender, e);
+            }
+            else
+            {
+                // Synchronisierung nicht notwendig
+                this.State = e.SwitchEnabled;
+            }
+               
         }
     }
 }

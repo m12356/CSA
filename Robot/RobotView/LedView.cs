@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
+using RobotCtrl;
 
 namespace RobotView
 {
@@ -50,9 +51,19 @@ namespace RobotView
 
 
 
-        private void LedStateChanged(Object sender, RobotCtrl.LedEventArgs e)
+        private void LedStateChanged(object sender, LedEventArgs e)
         {
-            this.State = e.LedEnabled;
+            if (InvokeRequired) // Prüft ob Thread != GUI-Thread
+            {
+                // Synchronisierung notwendig
+                Invoke(new EventHandler<LedEventArgs>(LedStateChanged), sender, e);
+
+            }
+            else
+            {
+                // Synchronisierung nicht notwendig
+                this.State = e.LedEnabled;
+            }
         }
 
 
