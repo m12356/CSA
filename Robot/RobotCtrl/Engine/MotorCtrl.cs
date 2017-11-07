@@ -158,7 +158,7 @@ namespace RobotCtrl
         /// </summary>
         public virtual float Distance
         {
-            get { throw new NotImplementedException("ToDo"); }
+            get { return (((float)Math.PI * 76 / 1000) / 28672)*Ticks; }
         }
 
 
