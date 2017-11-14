@@ -32,6 +32,8 @@ namespace RobotView
             this.upDownSpeed = new System.Windows.Forms.NumericUpDown();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.commonRunParametersOben = new System.Windows.Forms.Button();
+            this.commonRunParametersUnten = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label16
@@ -102,17 +104,35 @@ namespace RobotView
             this.label18.Size = new System.Drawing.Size(172, 20);
             this.label18.Text = "Speed (+ mm/s)";
             // 
+            // commonRunParametersOben
+            // 
+            this.commonRunParametersOben.Location = new System.Drawing.Point(296, 20);
+            this.commonRunParametersOben.Name = "commonRunParametersOben";
+            this.commonRunParametersOben.Size = new System.Drawing.Size(54, 24);
+            this.commonRunParametersOben.TabIndex = 24;
+            this.commonRunParametersOben.Text = "...";
+            // 
+            // commonRunParametersUnten
+            // 
+            this.commonRunParametersUnten.Location = new System.Drawing.Point(296, 50);
+            this.commonRunParametersUnten.Name = "commonRunParametersUnten";
+            this.commonRunParametersUnten.Size = new System.Drawing.Size(54, 24);
+            this.commonRunParametersUnten.TabIndex = 25;
+            this.commonRunParametersUnten.Text = "...";
+            // 
             // CommonRunParameters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Controls.Add(this.commonRunParametersUnten);
+            this.Controls.Add(this.commonRunParametersOben);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.upDownAcceleration);
             this.Controls.Add(this.upDownSpeed);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Name = "CommonRunParameters";
-            this.Size = new System.Drawing.Size(301, 84);
+            this.Size = new System.Drawing.Size(413, 84);
             this.ResumeLayout(false);
 
         }
@@ -124,5 +144,7 @@ namespace RobotView
         private System.Windows.Forms.NumericUpDown upDownSpeed;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button commonRunParametersOben;
+        private System.Windows.Forms.Button commonRunParametersUnten;
     }
 }

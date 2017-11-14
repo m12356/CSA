@@ -43,5 +43,10 @@ namespace RobotView
             buttonTurnStart_Click(null, EventArgs.Empty);
         }
         #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

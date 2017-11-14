@@ -32,8 +32,8 @@ namespace Testat
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.driveView = new RobotView.DriveView();
             this.consoleView = new RobotView.ConsoleView();
+            this.driveView = new RobotView.DriveView();
             this.commonRunParameters = new RobotView.CommonRunParameters();
             this.runLine = new RobotView.RunLine();
             this.runTurn = new RobotView.RunTurn();
@@ -42,20 +42,28 @@ namespace Testat
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(451, 478);
+            this.button1.Location = new System.Drawing.Point(451, 396);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(201, 76);
             this.button1.TabIndex = 0;
             this.button1.Text = "Halt";
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(697, 478);
+            this.button2.Location = new System.Drawing.Point(686, 396);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(193, 76);
             this.button2.TabIndex = 1;
             this.button2.Text = "Stop";
+            // 
+            // consoleView
+            // 
+            this.consoleView.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.consoleView.Location = new System.Drawing.Point(37, 371);
+            this.consoleView.Name = "consoleView";
+            this.consoleView.RobotConsole = null;
+            this.consoleView.Size = new System.Drawing.Size(282, 79);
+            this.consoleView.TabIndex = 0;
             // 
             // driveView
             // 
@@ -64,15 +72,6 @@ namespace Testat
             this.driveView.Name = "driveView";
             this.driveView.Size = new System.Drawing.Size(365, 361);
             this.driveView.TabIndex = 0;
-            // 
-            // consoleView
-            // 
-            this.consoleView.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.consoleView.Location = new System.Drawing.Point(13, 419);
-            this.consoleView.Name = "consoleView";
-            this.consoleView.RobotConsole = null;
-            this.consoleView.Size = new System.Drawing.Size(282, 79);
-            this.consoleView.TabIndex = 0;
             // 
             // commonRunParameters
             // 
@@ -88,7 +87,7 @@ namespace Testat
             this.runLine.Acceleration = 0F;
             this.runLine.Drive = null;
             this.runLine.Length = 1F;
-            this.runLine.Location = new System.Drawing.Point(451, 155);
+            this.runLine.Location = new System.Drawing.Point(451, 134);
             this.runLine.Name = "runLine";
             this.runLine.Size = new System.Drawing.Size(439, 58);
             this.runLine.Speed = 0F;
@@ -98,7 +97,7 @@ namespace Testat
             // 
             this.runTurn.Acceleration = 0F;
             this.runTurn.Drive = null;
-            this.runTurn.Location = new System.Drawing.Point(451, 251);
+            this.runTurn.Location = new System.Drawing.Point(453, 206);
             this.runTurn.Name = "runTurn";
             this.runTurn.Size = new System.Drawing.Size(441, 56);
             this.runTurn.Speed = 0F;
@@ -108,7 +107,7 @@ namespace Testat
             // 
             this.runArc.Acceleration = 0F;
             this.runArc.Drive = null;
-            this.runArc.Location = new System.Drawing.Point(451, 333);
+            this.runArc.Location = new System.Drawing.Point(453, 278);
             this.runArc.Name = "runArc";
             this.runArc.Size = new System.Drawing.Size(439, 112);
             this.runArc.Speed = 0F;
@@ -119,7 +118,7 @@ namespace Testat
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(933, 573);
+            this.ClientSize = new System.Drawing.Size(958, 548);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.consoleView);

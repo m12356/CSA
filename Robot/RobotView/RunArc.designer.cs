@@ -36,6 +36,8 @@ namespace RobotView
             this.label5 = new System.Windows.Forms.Label();
             this.upDownArcRadius = new System.Windows.Forms.NumericUpDown();
             this.buttonStartArc = new System.Windows.Forms.Button();
+            this.runArcUnten = new System.Windows.Forms.Button();
+            this.runArcOben = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonArcNeg
@@ -139,16 +141,35 @@ namespace RobotView
             // 
             // buttonStartArc
             // 
-            this.buttonStartArc.Location = new System.Drawing.Point(296, 62);
+            this.buttonStartArc.Location = new System.Drawing.Point(352, 30);
             this.buttonStartArc.Name = "buttonStartArc";
-            this.buttonStartArc.Size = new System.Drawing.Size(51, 24);
+            this.buttonStartArc.Size = new System.Drawing.Size(69, 56);
             this.buttonStartArc.TabIndex = 23;
             this.buttonStartArc.Text = "Start";
+            // 
+            // runArcUnten
+            // 
+            this.runArcUnten.Location = new System.Drawing.Point(296, 60);
+            this.runArcUnten.Name = "runArcUnten";
+            this.runArcUnten.Size = new System.Drawing.Size(50, 24);
+            this.runArcUnten.TabIndex = 32;
+            this.runArcUnten.Text = "...";
+            this.runArcUnten.Click += new System.EventHandler(this.runArcUnten_Click);
+            // 
+            // runArcOben
+            // 
+            this.runArcOben.Location = new System.Drawing.Point(296, 30);
+            this.runArcOben.Name = "runArcOben";
+            this.runArcOben.Size = new System.Drawing.Size(50, 24);
+            this.runArcOben.TabIndex = 33;
+            this.runArcOben.Text = "...";
             // 
             // RunArc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Controls.Add(this.runArcOben);
+            this.Controls.Add(this.runArcUnten);
             this.Controls.Add(this.buttonArcNeg);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -159,7 +180,7 @@ namespace RobotView
             this.Controls.Add(this.upDownArcRadius);
             this.Controls.Add(this.buttonStartArc);
             this.Name = "RunArc";
-            this.Size = new System.Drawing.Size(351, 90);
+            this.Size = new System.Drawing.Size(438, 90);
             this.ResumeLayout(false);
 
         }
@@ -175,5 +196,7 @@ namespace RobotView
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown upDownArcRadius;
         private System.Windows.Forms.Button buttonStartArc;
+        private System.Windows.Forms.Button runArcUnten;
+        private System.Windows.Forms.Button runArcOben;
     }
 }
