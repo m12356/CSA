@@ -58,7 +58,12 @@ namespace RobotView
 
         private void runArcUnten_Click(object sender, EventArgs e)
         {
-
+            NumberKeyboard nk = new NumberKeyboard();
+            if
+             (nk.ShowDialog() == DialogResult.OK)
+            {
+                // Dialog wurde mit OK beendet => Werte übernehmen
+            }
 
         }
     }

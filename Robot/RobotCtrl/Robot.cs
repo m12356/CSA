@@ -25,7 +25,7 @@ namespace RobotCtrl
         public Robot()
         {
             this.robotConsole = new RobotConsole();
-            //this.radar = new Radar(Constants.IORadarSensor);
+            this.radar = new Radar(Constants.IORadarSensor);
             this.drive = new Drive();
         }
 
