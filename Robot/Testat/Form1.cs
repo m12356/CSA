@@ -56,5 +56,14 @@ namespace Testat
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            drive.Stop();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            drive.Halt();
+        }
     }
 }

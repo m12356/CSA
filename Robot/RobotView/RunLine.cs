@@ -34,6 +34,7 @@ namespace RobotView
 
         private void buttonLineStart_Click(object sender, EventArgs e)
         {
+
             if (Drive != null) Drive.RunLine((float)upDownLineLength.Value / 1000,Speed, Acceleration);
             
         }

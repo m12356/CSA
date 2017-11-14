@@ -42,24 +42,26 @@ namespace Testat
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(375, 327);
+            this.button1.Location = new System.Drawing.Point(383, 338);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(201, 76);
             this.button1.TabIndex = 0;
             this.button1.Text = "Halt";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(602, 327);
+            this.button2.Location = new System.Drawing.Point(623, 338);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(193, 76);
             this.button2.TabIndex = 1;
             this.button2.Text = "Stop";
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // consoleView
             // 
             this.consoleView.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.consoleView.Location = new System.Drawing.Point(28, 327);
+            this.consoleView.Location = new System.Drawing.Point(36, 373);
             this.consoleView.Name = "consoleView";
             this.consoleView.RobotConsole = null;
             this.consoleView.Size = new System.Drawing.Size(282, 79);
@@ -76,9 +78,9 @@ namespace Testat
             // commonRunParameters
             // 
             this.commonRunParameters.Acceleration = 0.3F;
-            this.commonRunParameters.Location = new System.Drawing.Point(375, 4);
+            this.commonRunParameters.Location = new System.Drawing.Point(377, 0);
             this.commonRunParameters.Name = "commonRunParameters";
-            this.commonRunParameters.Size = new System.Drawing.Size(407, 85);
+            this.commonRunParameters.Size = new System.Drawing.Size(542, 95);
             this.commonRunParameters.Speed = 0.5F;
             this.commonRunParameters.TabIndex = 0;
             // 
@@ -87,9 +89,9 @@ namespace Testat
             this.runLine.Acceleration = 0F;
             this.runLine.Drive = null;
             this.runLine.Length = 1F;
-            this.runLine.Location = new System.Drawing.Point(373, 95);
+            this.runLine.Location = new System.Drawing.Point(377, 91);
             this.runLine.Name = "runLine";
-            this.runLine.Size = new System.Drawing.Size(439, 58);
+            this.runLine.Size = new System.Drawing.Size(530, 56);
             this.runLine.Speed = 0F;
             this.runLine.TabIndex = 0;
             // 
@@ -97,9 +99,9 @@ namespace Testat
             // 
             this.runTurn.Acceleration = 0F;
             this.runTurn.Drive = null;
-            this.runTurn.Location = new System.Drawing.Point(373, 159);
+            this.runTurn.Location = new System.Drawing.Point(383, 155);
             this.runTurn.Name = "runTurn";
-            this.runTurn.Size = new System.Drawing.Size(441, 56);
+            this.runTurn.Size = new System.Drawing.Size(524, 56);
             this.runTurn.Speed = 0F;
             this.runTurn.TabIndex = 0;
             // 
@@ -107,9 +109,9 @@ namespace Testat
             // 
             this.runArc.Acceleration = 0F;
             this.runArc.Drive = null;
-            this.runArc.Location = new System.Drawing.Point(373, 221);
+            this.runArc.Location = new System.Drawing.Point(377, 219);
             this.runArc.Name = "runArc";
-            this.runArc.Size = new System.Drawing.Size(439, 112);
+            this.runArc.Size = new System.Drawing.Size(542, 112);
             this.runArc.Speed = 0F;
             this.runArc.TabIndex = 0;
             // 
@@ -118,7 +120,7 @@ namespace Testat
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(825, 436);
+            this.ClientSize = new System.Drawing.Size(937, 458);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.consoleView);
