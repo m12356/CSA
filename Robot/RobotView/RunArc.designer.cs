@@ -146,6 +146,7 @@ namespace RobotView
             this.buttonStartArc.Size = new System.Drawing.Size(69, 56);
             this.buttonStartArc.TabIndex = 23;
             this.buttonStartArc.Text = "Start";
+            this.buttonStartArc.Click += new System.EventHandler(this.buttonStartArc_Click_1);
             // 
             // runArcUnten
             // 

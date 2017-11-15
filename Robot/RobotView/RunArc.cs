@@ -66,5 +66,12 @@ namespace RobotView
             }
 
         }
+
+        private void buttonStartArc_Click_1(object sender, EventArgs e)
+        {
+            if (Drive != null && (arcLeftRadioButton.Checked == true)) Drive.RunArcLeft((float)upDownArcRadius.Value,(float)upDownArcAngle.Value / 1000, Speed, Acceleration);
+            if (Drive != null && (radioButtonArcRight.Checked == true)) Drive.RunArcRight((float)upDownArcRadius.Value, (float)upDownArcAngle.Value / 1000, Speed, Acceleration);
+
+        }
     }
 }
