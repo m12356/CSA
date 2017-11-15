@@ -45,6 +45,8 @@ namespace RobotView
             catch (Exception) { }
         }
 
+       
+
         private void button1_Click(object sender, EventArgs e)
         {
             Add("1");
@@ -101,6 +103,58 @@ namespace RobotView
 
         #endregion
 
+        #region numberAdding
+
+        private void AddValue(string ch)
+        {
+            float newNumber;
+            int valueOfChange;
+            string s = TextValue.TrimStart('0');
+            if (s.Length == 0) s = "0";
+            try
+            {
+                newNumber = float.Parse(s);
+                valueOfChange = int.Parse(ch);
+                Number = newNumber + valueOfChange;
+                TextValue = (newNumber + valueOfChange).ToString();
+
+            }
+            catch (Exception) { }
+
+        }
+
+        private void buttonMinus1_Click(object sender, EventArgs e)
+        {
+            AddValue("-1");
+        }
+
+        private void buttonMinus10_Click(object sender, EventArgs e)
+        {
+            AddValue("-10");
+        }
+
+        private void buttonMinus100_Click(object sender, EventArgs e)
+        {
+            AddValue("-100");
+        }
+
+        private void buttonAdd1_Click(object sender, EventArgs e)
+        {
+            AddValue("1");
+        }
+
+        private void buttonAdd10_Click(object sender, EventArgs e)
+        {
+            AddValue("10");
+        }
+
+        private void buttonAdd100_Click(object sender, EventArgs e)
+        {
+            AddValue("100");
+        }
+
+        #endregion
+
         private void buttonClear_Click(object sender, EventArgs e)
         {
             TextValue = "0";
@@ -133,6 +187,16 @@ namespace RobotView
         {
             if (TextValue.StartsWith("-")) TextValue = TextValue.Substring(1);
             else TextValue = '-' + TextValue;
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            // TODO
+        }
+
+        private void buttonOk_Click(object sender, EventArgs e)
+        {
+            // TODO
         }
     }
 }

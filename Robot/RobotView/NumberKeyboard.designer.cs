@@ -150,6 +150,7 @@
             this.buttonAdd10.Size = new System.Drawing.Size(50, 50);
             this.buttonAdd10.TabIndex = 9;
             this.buttonAdd10.Text = "+10";
+            this.buttonAdd10.Click += new System.EventHandler(this.buttonAdd10_Click);
             // 
             // buttonAdd100
             // 
@@ -158,6 +159,7 @@
             this.buttonAdd100.Size = new System.Drawing.Size(50, 50);
             this.buttonAdd100.TabIndex = 10;
             this.buttonAdd100.Text = "+100";
+            this.buttonAdd100.Click += new System.EventHandler(this.buttonAdd100_Click);
             // 
             // buttonMinus10
             // 
@@ -166,6 +168,7 @@
             this.buttonMinus10.Size = new System.Drawing.Size(50, 50);
             this.buttonMinus10.TabIndex = 11;
             this.buttonMinus10.Text = "-10";
+            this.buttonMinus10.Click += new System.EventHandler(this.buttonMinus10_Click);
             // 
             // buttonMinus100
             // 
@@ -174,6 +177,7 @@
             this.buttonMinus100.Size = new System.Drawing.Size(50, 50);
             this.buttonMinus100.TabIndex = 12;
             this.buttonMinus100.Text = "-100";
+            this.buttonMinus100.Click += new System.EventHandler(this.buttonMinus100_Click);
             // 
             // textBox1
             // 
@@ -189,6 +193,7 @@
             this.buttonAdd1.Size = new System.Drawing.Size(50, 50);
             this.buttonAdd1.TabIndex = 14;
             this.buttonAdd1.Text = "+1";
+            this.buttonAdd1.Click += new System.EventHandler(this.buttonAdd1_Click);
             // 
             // buttonMinus1
             // 
@@ -197,6 +202,7 @@
             this.buttonMinus1.Size = new System.Drawing.Size(50, 50);
             this.buttonMinus1.TabIndex = 15;
             this.buttonMinus1.Text = "-1";
+            this.buttonMinus1.Click += new System.EventHandler(this.buttonMinus1_Click);
             // 
             // button0
             // 
@@ -226,6 +232,7 @@
             this.buttonOk.Size = new System.Drawing.Size(50, 50);
             this.buttonOk.TabIndex = 18;
             this.buttonOk.Text = "OK";
+            this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
             // buttonCancel
             // 
@@ -235,6 +242,7 @@
             this.buttonCancel.Size = new System.Drawing.Size(50, 50);
             this.buttonCancel.TabIndex = 20;
             this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonBack
             // 
