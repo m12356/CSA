@@ -35,19 +35,31 @@ namespace RobotView
 
         private void buttonStartArc_Click(object sender, EventArgs e)
         {
-            if (Drive != null)
+            if (InvokeRequired) // Prüft ob Thread != GUI-Thread
             {
-                if (radioButtonArcRight.Checked)
+                // Synchronisierung notwendig
+                Invoke(new EventHandler<EventArgs>(buttonStartArc_Click), sender, e);
+
+            }
+            else
+            {
+                // Synchronisierung nicht notwendig
+                if (Drive != null)
                 {
-                    Drive.RunArcRight((float)upDownArcRadius.Value / 1000,
-                        (float)upDownArcAngle.Value, Speed, Acceleration);
-                }
-                else
-                {
-                    Drive.RunArcLeft((float)upDownArcRadius.Value / 1000,
-                        (float)upDownArcAngle.Value, Speed, Acceleration);
+                    if (radioButtonArcRight.Checked)
+                    {
+                        Drive.RunArcRight((float)upDownArcRadius.Value / 1000,
+                            (float)upDownArcAngle.Value, Speed, Acceleration);
+                    }
+                    else
+                    {
+                        Drive.RunArcLeft((float)upDownArcRadius.Value / 1000,
+                            (float)upDownArcAngle.Value, Speed, Acceleration);
+                    }
                 }
             }
+
+           
         }
 
         public void Start()
@@ -62,16 +74,20 @@ namespace RobotView
             if
              (nk.ShowDialog() == DialogResult.OK)
             {
-                // Dialog wurde mit OK beendet => Werte übernehmen
+                upDownArcAngle.Value = (int)nk.Number;
             }
 
         }
 
-        private void buttonStartArc_Click_1(object sender, EventArgs e)
+        private void runArcOben_Click(object sender, EventArgs e)
         {
-            if (Drive != null && (arcLeftRadioButton.Checked == true)) Drive.RunArcLeft((float)upDownArcRadius.Value,(float)upDownArcAngle.Value / 1000, Speed, Acceleration);
-            if (Drive != null && (radioButtonArcRight.Checked == true)) Drive.RunArcRight((float)upDownArcRadius.Value, (float)upDownArcAngle.Value / 1000, Speed, Acceleration);
+            NumberKeyboard nk = new NumberKeyboard();
+            if
+             (nk.ShowDialog() == DialogResult.OK)
+            {
+                upDownArcRadius.Value = (int)nk.Number;
 
+            }
         }
     }
 }

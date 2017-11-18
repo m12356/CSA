@@ -22,8 +22,11 @@ namespace Testat
             this.robotConsole = new RobotCtrl.RobotConsole();
             this.consoleView.RobotConsole = robotConsole;
             robotConsole[Switches.Switch1].SwitchStateChanged += Form1_SwitchStateChanged;
+            robotConsole[Switches.Switch1].SwitchStateChanged += MyRunArc;
             robotConsole[Switches.Switch2].SwitchStateChanged += Form1_SwitchStateChanged;
+            robotConsole[Switches.Switch2].SwitchStateChanged += MyRunTurn;
             robotConsole[Switches.Switch3].SwitchStateChanged += Form1_SwitchStateChanged;
+            robotConsole[Switches.Switch3].SwitchStateChanged += MyRunLine;
             robotConsole[Switches.Switch4].SwitchStateChanged += Form1_SwitchStateChanged;
             this.commonRunParameters.SpeedChanged += CommonRunParameters1_SpeedChanged;
             this.commonRunParameters.AccelerationChanged += CommonRunParameters1_AccelerationChanged;
@@ -50,6 +53,24 @@ namespace Testat
             this.runArc.Speed = this.commonRunParameters.Speed;
             this.runTurn.Speed = this.commonRunParameters.Speed;
         }
+
+
+        private void MyRunLine(object sender, EventArgs e)
+        {
+            runLine.Start();
+        }
+
+        private void MyRunArc(object sender, EventArgs e)
+        {
+            runArc.Start();
+        }
+
+        private void MyRunTurn(object sender, EventArgs e)
+        {
+            runTurn.Start();
+        }
+
+
         private void Form1_SwitchStateChanged(object sender, SwitchEventArgs e)
         {
             robotConsole[(Leds)(int)e.Swi].LedEnabled = e.SwitchEnabled;

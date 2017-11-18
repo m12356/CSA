@@ -29,8 +29,21 @@ namespace RobotView
         #region methods
         private void buttonTurnStart_Click(object sender, EventArgs e)
         {
-            if (Drive != null) Drive.RunTurn(
-                (float)upDownTurnAngle.Value, Speed, Acceleration);
+            
+
+            if(InvokeRequired) // Prüft ob Thread != GUI-Thread
+            {
+                // Synchronisierung notwendig
+                Invoke(new EventHandler<EventArgs>(buttonTurnStart_Click), sender, e);
+
+            }
+            else
+            {
+                // Synchronisierung nicht notwendig
+                if (Drive != null) Drive.RunTurn(
+                  (float)upDownTurnAngle.Value, Speed, Acceleration);
+            }
+
         }
 
         private void buttonTurnNeg_Click(object sender, EventArgs e)
@@ -42,11 +55,18 @@ namespace RobotView
         {
             buttonTurnStart_Click(null, EventArgs.Empty);
         }
+
         #endregion
 
-        private void button1_Click(object sender, EventArgs e)
+        private void runTurnMitte_Click(object sender, EventArgs e)
         {
+            NumberKeyboard nk = new NumberKeyboard();
+            if
+             (nk.ShowDialog() == DialogResult.OK)
+            {
+                upDownTurnAngle.Value = (int)nk.Number;
 
+            }
         }
     }
 }

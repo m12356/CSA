@@ -92,7 +92,7 @@ namespace RobotView
             0,
             -2147483648});
             this.upDownArcAngle.Name = "upDownArcAngle";
-            this.upDownArcAngle.Size = new System.Drawing.Size(75, 24);
+            this.upDownArcAngle.Size = new System.Drawing.Size(75, 28);
             this.upDownArcAngle.TabIndex = 27;
             this.upDownArcAngle.Value = new decimal(new int[] {
             90,
@@ -131,7 +131,7 @@ namespace RobotView
             0,
             0});
             this.upDownArcRadius.Name = "upDownArcRadius";
-            this.upDownArcRadius.Size = new System.Drawing.Size(75, 24);
+            this.upDownArcRadius.Size = new System.Drawing.Size(75, 28);
             this.upDownArcRadius.TabIndex = 28;
             this.upDownArcRadius.Value = new decimal(new int[] {
             1000,
@@ -146,7 +146,7 @@ namespace RobotView
             this.buttonStartArc.Size = new System.Drawing.Size(69, 56);
             this.buttonStartArc.TabIndex = 23;
             this.buttonStartArc.Text = "Start";
-            this.buttonStartArc.Click += new System.EventHandler(this.buttonStartArc_Click_1);
+            this.buttonStartArc.Click += new System.EventHandler(this.buttonStartArc_Click);
             // 
             // runArcUnten
             // 
@@ -164,10 +164,11 @@ namespace RobotView
             this.runArcOben.Size = new System.Drawing.Size(50, 24);
             this.runArcOben.TabIndex = 33;
             this.runArcOben.Text = "...";
+            this.runArcOben.Click += new System.EventHandler(this.runArcOben_Click);
             // 
             // RunArc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.runArcOben);
             this.Controls.Add(this.runArcUnten);

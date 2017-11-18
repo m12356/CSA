@@ -72,7 +72,7 @@ namespace RobotView
             0,
             -2147483648});
             this.upDownLineLength.Name = "upDownLineLength";
-            this.upDownLineLength.Size = new System.Drawing.Size(75, 24);
+            this.upDownLineLength.Size = new System.Drawing.Size(75, 28);
             this.upDownLineLength.TabIndex = 20;
             this.upDownLineLength.Value = new decimal(new int[] {
             1000,
@@ -103,11 +103,11 @@ namespace RobotView
             this.runLineMitte.Size = new System.Drawing.Size(57, 24);
             this.runLineMitte.TabIndex = 23;
             this.runLineMitte.Text = "...";
-            this.runLineMitte.Click += new System.EventHandler(this.button1_Click);
+            this.runLineMitte.Click += new System.EventHandler(this.runLineMitte_Click);
             // 
             // RunLine
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.runLineMitte);
             this.Controls.Add(this.buttonLineStart);

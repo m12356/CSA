@@ -100,6 +100,33 @@ namespace RobotView
             add { upDownAcceleration.ValueChanged += value; }
             remove { upDownAcceleration.ValueChanged -= value; }
         }
+
+        private void commonRunParametersOben_Click(object sender, EventArgs e)
+        {
+            NumberKeyboard nk = new NumberKeyboard();
+            if
+             (nk.ShowDialog() == DialogResult.OK)
+            {
+                upDownSpeed.Value = (int)nk.Number;
+
+            }
+        }
+
+        private void commonRunParametersUnten_Click(object sender, EventArgs e)
+        {
+            NumberKeyboard nk = new NumberKeyboard();
+            if
+             (nk.ShowDialog() == DialogResult.OK)
+            {
+                upDownAcceleration.Value = (int)nk.Number;
+
+            }
+        }
+
+        
+
+
+
         #endregion
 
 #endif

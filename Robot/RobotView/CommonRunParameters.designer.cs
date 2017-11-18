@@ -41,7 +41,7 @@ namespace RobotView
             this.label16.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.label16.Location = new System.Drawing.Point(0, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(182, 20);
+            this.label16.Size = new System.Drawing.Size(221, 24);
             this.label16.Text = "Common Run Parameter";
             // 
             // upDownAcceleration
@@ -51,14 +51,14 @@ namespace RobotView
             0,
             0,
             0});
-            this.upDownAcceleration.Location = new System.Drawing.Point(215, 50);
+            this.upDownAcceleration.Location = new System.Drawing.Point(227, 50);
             this.upDownAcceleration.Maximum = new decimal(new int[] {
             5000,
             0,
             0,
             0});
             this.upDownAcceleration.Name = "upDownAcceleration";
-            this.upDownAcceleration.Size = new System.Drawing.Size(75, 24);
+            this.upDownAcceleration.Size = new System.Drawing.Size(75, 28);
             this.upDownAcceleration.TabIndex = 20;
             this.upDownAcceleration.Value = new decimal(new int[] {
             300,
@@ -73,14 +73,14 @@ namespace RobotView
             0,
             0,
             0});
-            this.upDownSpeed.Location = new System.Drawing.Point(215, 20);
+            this.upDownSpeed.Location = new System.Drawing.Point(227, 20);
             this.upDownSpeed.Maximum = new decimal(new int[] {
             8000,
             0,
             0,
             0});
             this.upDownSpeed.Name = "upDownSpeed";
-            this.upDownSpeed.Size = new System.Drawing.Size(75, 24);
+            this.upDownSpeed.Size = new System.Drawing.Size(75, 28);
             this.upDownSpeed.TabIndex = 21;
             this.upDownSpeed.Value = new decimal(new int[] {
             500,
@@ -106,23 +106,25 @@ namespace RobotView
             // 
             // commonRunParametersOben
             // 
-            this.commonRunParametersOben.Location = new System.Drawing.Point(296, 20);
+            this.commonRunParametersOben.Location = new System.Drawing.Point(317, 20);
             this.commonRunParametersOben.Name = "commonRunParametersOben";
             this.commonRunParametersOben.Size = new System.Drawing.Size(54, 24);
             this.commonRunParametersOben.TabIndex = 24;
             this.commonRunParametersOben.Text = "...";
+            this.commonRunParametersOben.Click += new System.EventHandler(this.commonRunParametersOben_Click);
             // 
             // commonRunParametersUnten
             // 
-            this.commonRunParametersUnten.Location = new System.Drawing.Point(296, 50);
+            this.commonRunParametersUnten.Location = new System.Drawing.Point(317, 50);
             this.commonRunParametersUnten.Name = "commonRunParametersUnten";
             this.commonRunParametersUnten.Size = new System.Drawing.Size(54, 24);
             this.commonRunParametersUnten.TabIndex = 25;
             this.commonRunParametersUnten.Text = "...";
+            this.commonRunParametersUnten.Click += new System.EventHandler(this.commonRunParametersUnten_Click);
             // 
             // CommonRunParameters
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.commonRunParametersUnten);
             this.Controls.Add(this.commonRunParametersOben);

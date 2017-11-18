@@ -35,8 +35,19 @@ namespace RobotView
         private void buttonLineStart_Click(object sender, EventArgs e)
         {
 
-            if (Drive != null) Drive.RunLine((float)upDownLineLength.Value / 1000,Speed, Acceleration);
-            
+            if (InvokeRequired) // Prüft ob Thread != GUI-Thread
+            {
+                // Synchronisierung notwendig
+                Invoke(new EventHandler<EventArgs>(buttonLineStart_Click), sender, e);
+
+            }
+            else
+            {
+                // Synchronisierung nicht notwendig
+                if (Drive != null) Drive.RunLine((float)upDownLineLength.Value / 1000, Speed, Acceleration);
+
+            }
+
         }
 
         public void Start()
@@ -49,11 +60,18 @@ namespace RobotView
             get { return (float)(upDownLineLength.Value / 1000); }
             set { upDownLineLength.Value = (decimal)(value * 1000); }
         }
+
         #endregion
 
-        private void button1_Click(object sender, EventArgs e)
+        private void runLineMitte_Click(object sender, EventArgs e)
         {
+            NumberKeyboard nk = new NumberKeyboard();
+            if
+             (nk.ShowDialog() == DialogResult.OK)
+            {
+                upDownLineLength.Value = (int)nk.Number;
 
+            }
         }
     }
 }
