@@ -15,6 +15,7 @@ namespace Testat
     {
         private Drive drive;
         RobotConsole robotConsole;
+        private Radar mySuperRadar;
 
         public Form1()
         {
@@ -36,6 +37,7 @@ namespace Testat
             this.runLine.Drive = drive;
             this.runArc.Drive = drive;
             this.runTurn.Drive = drive;
+            this.mySuperRadar = new Radar(RobotCtrl.Constants.IORadarSensor);
 
             CommonRunParameters1_AccelerationChanged(null, EventArgs.Empty);
             CommonRunParameters1_SpeedChanged(null, EventArgs.Empty);
@@ -57,6 +59,11 @@ namespace Testat
 
         private void MyRunLine(object sender, EventArgs e)
         {
+            //while (mySuperRadar.Distance > 0.3 || mySuperRadar.Distance == 0)
+            //{
+                
+            //}
+            //drive.Stop();
             runLine.Start();
         }
 
