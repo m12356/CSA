@@ -38,6 +38,8 @@ namespace Testat
             this.runLine = new RobotView.RunLine();
             this.runTurn = new RobotView.RunTurn();
             this.runArc = new RobotView.RunArc();
+            this.SuperRadarTimer = new System.Windows.Forms.Timer();
+            this.timer2 = new System.Windows.Forms.Timer();
             this.SuspendLayout();
             // 
             // button1
@@ -115,6 +117,10 @@ namespace Testat
             this.runArc.Speed = 0F;
             this.runArc.TabIndex = 0;
             // 
+            // SuperRadarTimer
+            // 
+            this.SuperRadarTimer.Tick += new System.EventHandler(this.SuperRadarTimer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -145,6 +151,8 @@ namespace Testat
         private RunTurn runTurn;
         private RunArc runArc;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Timer SuperRadarTimer;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 

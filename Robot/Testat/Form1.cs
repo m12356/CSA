@@ -16,6 +16,7 @@ namespace Testat
         private Drive drive;
         RobotConsole robotConsole;
         private Radar mySuperRadar;
+        private Robot robot;
 
         public Form1()
         {
@@ -59,11 +60,8 @@ namespace Testat
 
         private void MyRunLine(object sender, EventArgs e)
         {
-            //while (mySuperRadar.Distance > 0.3 || mySuperRadar.Distance == 0)
-            //{
-                
-            //}
-            //drive.Stop();
+
+            
             runLine.Start();
         }
 
@@ -92,6 +90,25 @@ namespace Testat
         private void button1_Click(object sender, EventArgs e)
         {
             drive.Halt();
+        }
+
+        private void SuperRadarTimer_Tick(object sender, EventArgs e)
+        {
+
+            
+            label_Distance.Text = this.mySuperRadar.Distance.ToString("0.00") + "m";
+           
+            if (this.mySuperRadar.Distance <= 0.3)
+            {
+                this.robot.Drive.Stop();
+                //this.robot.Drive.Power = false;
+                
+                label_Distance.BackColor = Color.Red;
+
+            }
+
+
+
         }
     }
 }
