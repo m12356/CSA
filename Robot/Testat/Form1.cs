@@ -16,7 +16,8 @@ namespace Testat
         private Drive drive;
         RobotConsole robotConsole;
         private Radar mySuperRadar;
-        private Robot robot;
+        
+     
 
         public Form1()
         {
@@ -36,6 +37,8 @@ namespace Testat
             this.drive.Power = true;
             this.driveView.Drive = drive;
             this.runLine.Drive = drive;
+            
+
             this.runArc.Drive = drive;
             this.runTurn.Drive = drive;
             this.mySuperRadar = new Radar(RobotCtrl.Constants.IORadarSensor);
@@ -95,17 +98,27 @@ namespace Testat
         private void SuperRadarTimer_Tick(object sender, EventArgs e)
         {
 
-            
-            label_Distance.Text = this.mySuperRadar.Distance.ToString("0.00") + "m";
-           
-            if (this.mySuperRadar.Distance <= 0.3)
+            if (InvokeRequired) // Prüft ob Thread != GUI-Thread
             {
-                this.robot.Drive.Stop();
-                //this.robot.Drive.Power = false;
-                
-                label_Distance.BackColor = Color.Red;
+                // Synchronisierung notwendig
+                Invoke(new EventHandler<EventArgs>(SuperRadarTimer_Tick), sender, e);
 
             }
+            else
+            {
+                if (this.mySuperRadar.Distance <= 0.3)
+                {
+                    this.drive.Stop();
+                    robotConsole[Leds.Led1].LedEnabled = !robotConsole[Leds.Led1].LedEnabled;
+                    robotConsole[Leds.Led2].LedEnabled = !robotConsole[Leds.Led2].LedEnabled;
+                    robotConsole[Leds.Led3].LedEnabled = !robotConsole[Leds.Led3].LedEnabled;
+                    robotConsole[Leds.Led4].LedEnabled = !robotConsole[Leds.Led4].LedEnabled;
+
+                }
+            }
+
+
+            
 
 
 

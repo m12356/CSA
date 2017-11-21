@@ -32,14 +32,13 @@ namespace Testat
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.SuperRadarTimer = new System.Windows.Forms.Timer();
             this.consoleView = new RobotView.ConsoleView();
             this.driveView = new RobotView.DriveView();
             this.commonRunParameters = new RobotView.CommonRunParameters();
             this.runLine = new RobotView.RunLine();
             this.runTurn = new RobotView.RunTurn();
             this.runArc = new RobotView.RunArc();
-            this.SuperRadarTimer = new System.Windows.Forms.Timer();
-            this.timer2 = new System.Windows.Forms.Timer();
             this.SuspendLayout();
             // 
             // button1
@@ -59,6 +58,12 @@ namespace Testat
             this.button2.TabIndex = 1;
             this.button2.Text = "Stop";
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // SuperRadarTimer
+            // 
+            this.SuperRadarTimer.Enabled = true;
+            this.SuperRadarTimer.Interval = 200;
+            this.SuperRadarTimer.Tick += new System.EventHandler(this.SuperRadarTimer_Tick);
             // 
             // consoleView
             // 
@@ -117,10 +122,6 @@ namespace Testat
             this.runArc.Speed = 0F;
             this.runArc.TabIndex = 0;
             // 
-            // SuperRadarTimer
-            // 
-            this.SuperRadarTimer.Tick += new System.EventHandler(this.SuperRadarTimer_Tick);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -152,7 +153,6 @@ namespace Testat
         private RunArc runArc;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Timer SuperRadarTimer;
-        private System.Windows.Forms.Timer timer2;
     }
 }
 
