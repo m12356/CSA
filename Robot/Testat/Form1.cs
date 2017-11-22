@@ -115,6 +115,13 @@ namespace Testat
                     robotConsole[Leds.Led4].LedEnabled = !robotConsole[Leds.Led4].LedEnabled;
 
                 }
+                else
+                {
+                    robotConsole[Leds.Led1].LedEnabled = robotConsole[Switches.Switch1].SwitchEnabled; 
+                    robotConsole[Leds.Led2].LedEnabled = robotConsole[Switches.Switch2].SwitchEnabled;
+                    robotConsole[Leds.Led3].LedEnabled = robotConsole[Switches.Switch3].SwitchEnabled;
+                    robotConsole[Leds.Led4].LedEnabled = robotConsole[Switches.Switch4].SwitchEnabled;
+                }
             }
 
 

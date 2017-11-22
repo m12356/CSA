@@ -183,23 +183,6 @@ namespace RobotView
         {
             AddValue("100");
         }
-
-
-
-        
-
-       
-        
-
-        private void buttonCancel_Click(object sender, EventArgs e)
-        {
-            // TODO
-        }
-
-        private void buttonOk_Click(object sender, EventArgs e)
-        {
-            // TODO
-        }
     }
 }
 
